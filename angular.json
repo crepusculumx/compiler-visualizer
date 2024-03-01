@@ -49,7 +49,9 @@
               }
             ],
             "stylePreprocessorOptions": {
-              "includePaths": ["projects/visualizer-app/src/styles/themes"]
+              "includePaths": [
+                "projects/visualizer-app/src/styles/themes"
+              ]
             },
             "scripts": []
           },
@@ -121,6 +123,48 @@
             "lintFilePatterns": [
               "projects/visualizer-app/**/*.ts",
               "projects/visualizer-app/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "regex-fa-lib": {
+      "projectType": "library",
+      "root": "projects/regex-fa-lib",
+      "sourceRoot": "projects/regex-fa-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/regex-fa-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/regex-fa-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/regex-fa-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/regex-fa-lib/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/regex-fa-lib/**/*.ts",
+              "projects/regex-fa-lib/**/*.html"
             ]
           }
         }
