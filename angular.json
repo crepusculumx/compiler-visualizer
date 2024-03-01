@@ -2,7 +2,111 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {},
+  "projects": {
+    "visualizer-app": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "less"
+        }
+      },
+      "root": "projects/visualizer-app",
+      "sourceRoot": "projects/visualizer-app/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/visualizer-app",
+            "index": "projects/visualizer-app/src/index.html",
+            "browser": "projects/visualizer-app/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/visualizer-app/tsconfig.app.json",
+            "inlineStyleLanguage": "less",
+            "assets": [
+              "projects/visualizer-app/src/favicon.ico",
+              "projects/visualizer-app/src/assets"
+            ],
+            "styles": [
+              "projects/visualizer-app/src/styles.less"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "visualizer-app:build:production"
+            },
+            "development": {
+              "buildTarget": "visualizer-app:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "visualizer-app:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/visualizer-app/tsconfig.spec.json",
+            "inlineStyleLanguage": "less",
+            "assets": [
+              "projects/visualizer-app/src/favicon.ico",
+              "projects/visualizer-app/src/assets"
+            ],
+            "styles": [
+              "projects/visualizer-app/src/styles.less"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/visualizer-app/**/*.ts",
+              "projects/visualizer-app/**/*.html"
+            ]
+          }
+        }
+      }
+    }
+  },
   "cli": {
     "analytics": "0cb4079a-29c7-4adc-b2db-2c7e646fbd08",
     "schematicCollections": [
