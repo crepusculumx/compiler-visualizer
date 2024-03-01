@@ -27,11 +27,30 @@
             "inlineStyleLanguage": "less",
             "assets": [
               "projects/visualizer-app/src/favicon.ico",
-              "projects/visualizer-app/src/assets"
+              "projects/visualizer-app/src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
             ],
             "styles": [
-              "projects/visualizer-app/src/styles.less"
+              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
+              "projects/visualizer-app/src/styles.less",
+              {
+                "input": "projects/visualizer-app/src/styles/default.less",
+                "bundleName": "default",
+                "inject": false
+              },
+              {
+                "input": "projects/visualizer-app/src/styles/dark.less",
+                "bundleName": "dark",
+                "inject": false
+              }
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["projects/visualizer-app/src/styles/themes"]
+            },
             "scripts": []
           },
           "configurations": {
@@ -90,6 +109,7 @@
               "projects/visualizer-app/src/assets"
             ],
             "styles": [
+              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
               "projects/visualizer-app/src/styles.less"
             ],
             "scripts": []

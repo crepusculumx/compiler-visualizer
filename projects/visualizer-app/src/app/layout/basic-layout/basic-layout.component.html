@@ -1,0 +1,55 @@
+<nz-layout class="app-layout">
+  <nz-sider
+    class="menu-sidebar"
+    nzCollapsible
+    nzWidth="256px"
+    [nzCollapsed]="isCollapsed$ | async"
+    [nzCollapsedWidth]="0"
+    [nzTrigger]="null"
+  >
+    <div class="sidebar-logo">
+      <a routerLink="/">
+        <!--        <img src="./assets/favicon.ico" alt="logo" />-->
+        <h1>正则引擎算法可视化</h1>
+      </a>
+    </div>
+    <ng-container *ngIf="menus$ | async as menus">
+      <app-layout-menus [menus]="menus"></app-layout-menus>
+    </ng-container>
+  </nz-sider>
+  <nz-layout
+    class="right-layout"
+    [ngStyle]="(isCollapsed$ | async) ? {} : { 'margin-left': '256px' }"
+  >
+    <nz-header>
+      <div class="app-header">
+        <span
+          class="header-trigger"
+          (click)="isCollapsed$.next(!isCollapsed$.value)"
+        >
+          <i
+            class="trigger"
+            nz-icon
+            [nzType]="(isCollapsed$ | async) ? 'menu-unfold' : 'menu-fold'"
+          ></i>
+        </span>
+        <span class="header-trigger" (click)="themeService.toggleTheme()">
+          <i class="trigger" nz-icon nzType="skin" nzTheme="outline"></i>
+        </span>
+      </div>
+    </nz-header>
+    <nz-content>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+    <nz-footer>
+      <a
+        href="https://beian.miit.gov.cn/publish/query/indexFirst.action"
+        target="_blank"
+      >
+        <span style="color: #9d9d9d"> 备案号 </span>
+      </a>
+    </nz-footer>
+  </nz-layout>
+</nz-layout>

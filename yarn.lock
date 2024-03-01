@@ -202,6 +202,15 @@
   dependencies:
     tslib "^2.3.0"
 
+"@angular/cdk@^17.0.0":
+  version "17.2.1"
+  resolved "https://registry.npmmirror.com/@angular/cdk/-/cdk-17.2.1.tgz#0a00911f08d4cb837de93f33f35a688d73ca037b"
+  integrity sha512-9cWV9MyWnpImns/WQApgoQBKblXA9Zx2CpCkDNipRgx9RyvGrvCLjpEfwQI4HjpPAQDI1trsbeJKihzgz4tFgw==
+  dependencies:
+    tslib "^2.3.0"
+  optionalDependencies:
+    parse5 "^7.1.2"
+
 "@angular/cli@^17.2.2":
   version "17.2.2"
   resolved "https://registry.npmmirror.com/@angular/cli/-/cli-17.2.2.tgz#a613dd782b3e2c30c447a4987d179a6409973c03"
@@ -288,6 +297,21 @@
   integrity sha512-8UPjMzI98xZ6cDNm0MzHd9hFq6aOQJGmgxKDUPIG2h74glRwwbiewpo5hPo2EGIF8BLvQmmAm9ytr5zesHu0cg==
   dependencies:
     tslib "^2.3.0"
+
+"@ant-design/colors@^7.0.0":
+  version "7.0.2"
+  resolved "https://registry.npmmirror.com/@ant-design/colors/-/colors-7.0.2.tgz#c5c753a467ce8d86ba7ca4736d2c01f599bb5492"
+  integrity sha512-7KJkhTiPiLHSu+LmMJnehfJ6242OCxSlR3xHVBecYxnMW8MS/878NXct1GqYARyL59fyeFdKRxXTfvR9SnDgJg==
+  dependencies:
+    "@ctrl/tinycolor" "^3.6.1"
+
+"@ant-design/icons-angular@^17.0.0":
+  version "17.0.0"
+  resolved "https://registry.npmmirror.com/@ant-design/icons-angular/-/icons-angular-17.0.0.tgz#5e072f4be7fa0bcef1498be735de8b54ada23620"
+  integrity sha512-MNEh3UbkSl6gkdb5MQRNHEuWI1DnU1dME9zSymnWCipEXN7MB0mcYHSfyYTqKL1j45ftp6l1UnsLvhokRYyhXA==
+  dependencies:
+    "@ant-design/colors" "^7.0.0"
+    tslib "^2.0.0"
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.23.5":
   version "7.23.5"
@@ -1220,7 +1244,7 @@
   dependencies:
     regenerator-runtime "^0.14.0"
 
-"@babel/runtime@^7.8.4":
+"@babel/runtime@^7.21.0", "@babel/runtime@^7.8.4":
   version "7.24.0"
   resolved "https://registry.npmmirror.com/@babel/runtime/-/runtime-7.24.0.tgz#584c450063ffda59697021430cb47101b085951e"
   integrity sha512-Chk32uHMg6TnQdvw2e9IlqPpFX/6NLuK0Ys2PqLb7/gL5uFn9mXvK715FGLlOLQrcO4qIkNHkvPGktzzXexsFw==
@@ -1265,6 +1289,11 @@
   version "1.5.0"
   resolved "https://registry.npmmirror.com/@colors/colors/-/colors-1.5.0.tgz#bb504579c1cae923e6576a4f5da43d25f97bdbd9"
   integrity sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==
+
+"@ctrl/tinycolor@^3.6.1":
+  version "3.6.1"
+  resolved "https://registry.npmmirror.com/@ctrl/tinycolor/-/tinycolor-3.6.1.tgz#b6c75a56a1947cc916ea058772d666a2c8932f31"
+  integrity sha512-SITSV6aIXsuVNV3f3O0f2n/cgyEDWoSqtZMYiAmcsYHydcKrOz3gUxB/iXd/Qf08+IZX4KpgNbvUdMBmWz+kcA==
 
 "@discoveryjs/json-ext@0.5.7":
   version "0.5.7"
@@ -3188,6 +3217,13 @@ custom-event@~1.0.0:
   version "1.0.1"
   resolved "https://registry.npmmirror.com/custom-event/-/custom-event-1.0.1.tgz#5d02a46850adf1b4a317946a3928fccb5bfd0425"
   integrity sha512-GAj5FOq0Hd+RsCGVJxZuKaIDXDf3h6GQoNEjFgbLLI/trgtavwUbSnZ5pVfg27DVCaWjIohryS0JFwIJyT2cMg==
+
+date-fns@^2.16.1:
+  version "2.30.0"
+  resolved "https://registry.npmmirror.com/date-fns/-/date-fns-2.30.0.tgz#f367e644839ff57894ec6ac480de40cae4b0f4d0"
+  integrity sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==
+  dependencies:
+    "@babel/runtime" "^7.21.0"
 
 date-format@^4.0.14:
   version "4.0.14"
@@ -5329,6 +5365,16 @@ neo-async@^2.6.2:
   resolved "https://registry.npmmirror.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
+ng-zorro-antd@^17.2.0:
+  version "17.2.0"
+  resolved "https://registry.npmmirror.com/ng-zorro-antd/-/ng-zorro-antd-17.2.0.tgz#f9617f3a7769b799197de5eb37eaa54a074b73c6"
+  integrity sha512-D3NNK/JBumUZXK399eKUMFB+CJLMWeCJA4jX7bsqke09D0FKMDinkO3RFOfVffkeZrl7KrzRI2yALb/a1DvTrQ==
+  dependencies:
+    "@angular/cdk" "^17.0.0"
+    "@ant-design/icons-angular" "^17.0.0"
+    date-fns "^2.16.1"
+    tslib "^2.3.0"
+
 nice-napi@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmmirror.com/nice-napi/-/nice-napi-1.0.2.tgz#dc0ab5a1eac20ce548802fc5686eaa6bc654927b"
@@ -5742,7 +5788,7 @@ parse5-sax-parser@^7.0.0:
   dependencies:
     parse5 "^7.0.0"
 
-parse5@^7.0.0:
+parse5@^7.0.0, parse5@^7.1.2:
   version "7.1.2"
   resolved "https://registry.npmmirror.com/parse5/-/parse5-7.1.2.tgz#0736bebbfd77793823240a23b7fc5e010b7f8e32"
   integrity sha512-Czj1WaSVpaoj0wbhMzLmWD69anp2WH7FXMB9n1Sy8/ZFF9jolSQVMu1Ij5WIyGmcBmhk7EOndpO4mIpihVqAXw==
@@ -6884,7 +6930,7 @@ tsconfig-paths@^4.1.2:
     minimist "^1.2.6"
     strip-bom "^3.0.0"
 
-tslib@2.6.2, tslib@^2.1.0, tslib@^2.3.0, tslib@^2.4.0, tslib@^2.6.2:
+tslib@2.6.2, tslib@^2.0.0, tslib@^2.1.0, tslib@^2.3.0, tslib@^2.4.0, tslib@^2.6.2:
   version "2.6.2"
   resolved "https://registry.npmmirror.com/tslib/-/tslib-2.6.2.tgz#703ac29425e7b37cd6fd456e92404d46d1f3e4ae"
   integrity sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==
