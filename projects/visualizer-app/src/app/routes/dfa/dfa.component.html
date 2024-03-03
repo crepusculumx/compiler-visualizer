@@ -1,0 +1,6 @@
+<nz-page-header nzTitle="DFA可视化" [nzGhost]="false"></nz-page-header>
+
+<lib-dfa-table (dfaChange)="dfa$.next($event)"></lib-dfa-table>
+@if (dfaGraph$ | async; as dfaGraph) {
+  <lib-fa-graph [data$]="dfaGraph$"></lib-fa-graph>
+}
