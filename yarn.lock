@@ -6894,6 +6894,11 @@ regenerator-transform@^0.15.2:
   dependencies:
     "@babel/runtime" "^7.8.4"
 
+regex-fa-lib@./dist/regex-fa-lib:
+  version "0.0.0-watch"
+  dependencies:
+    tslib "^2.3.0"
+
 regex-parser@^2.2.11:
   version "2.3.0"
   resolved "https://registry.npmmirror.com/regex-parser/-/regex-parser-2.3.0.tgz#4bb61461b1a19b8b913f3960364bb57887f920ee"
